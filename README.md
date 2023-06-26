@@ -70,3 +70,15 @@ git add <имя файла>
 ```bash
 git add <имя файла>
 ```
+### Жизненный цикл файлов Git
+```mermaid
+flowchart LR
+    A[Untracked]
+    B[Tracked]
+    C[Modified]
+    D[Staged+Tracked]
+    A -->|git add| D
+    D -->|git commit| B
+    B -->|Изменения| C
+    C -->|git add| D
+```
